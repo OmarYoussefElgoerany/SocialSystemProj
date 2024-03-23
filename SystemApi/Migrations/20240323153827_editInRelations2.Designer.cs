@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SystemApi.SystemDAL.Context;
 
@@ -10,9 +11,11 @@ using SystemApi.SystemDAL.Context;
 namespace SystemApi.Migrations
 {
     [DbContext(typeof(SytemDbContext))]
-    partial class SytemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240323153827_editInRelations2")]
+    partial class editInRelations2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,6 +69,42 @@ namespace SystemApi.Migrations
                             Id = 4,
                             Name = "post9",
                             UserId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "post10",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "post11",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "post12",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "post13",
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "post14",
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "post15",
+                            UserId = 3
                         });
                 });
 
@@ -114,6 +153,55 @@ namespace SystemApi.Migrations
                             Comment = "Average post",
                             PostId = 3,
                             Rate = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Comment = "Poor post",
+                            PostId = 4,
+                            Rate = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Comment = "Terrible post",
+                            PostId = 5,
+                            Rate = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Comment = "Good post",
+                            PostId = 6,
+                            Rate = 4
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Comment = "Excellent post",
+                            PostId = 7,
+                            Rate = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Comment = "Average post",
+                            PostId = 8,
+                            Rate = 3
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Comment = "Poor post",
+                            PostId = 9,
+                            Rate = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Comment = "Terrible post",
+                            PostId = 10,
+                            Rate = 1
                         });
                 });
 

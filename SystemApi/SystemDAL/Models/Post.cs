@@ -8,6 +8,6 @@ namespace SystemApi.SystemDAL.Models
         public string Name { get; set; } = string.Empty;
         public int UserId { get; set; }
         public virtual User? User { get; set; }
-        public virtual List<Post> Posts { get; set; } = new List<Post>();
+        public virtual List<Review> Reviews { get; set; } = new List<Review>();
     }
 }

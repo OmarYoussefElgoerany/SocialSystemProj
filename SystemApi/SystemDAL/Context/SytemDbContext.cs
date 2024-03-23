@@ -29,6 +29,20 @@ namespace SystemApi.SystemDAL.Context
 ;
             // Add more seed data for Posts, Reviews, and Stories here...
 
+            // Seed Reviews
+            modelBuilder.Entity<Review>().HasData(
+                new Review { Id = 1, Rate = 4, Comment = "Good post", PostId = 1 },
+                new Review { Id = 2, Rate = 5, Comment = "Excellent post", PostId = 2 },
+                new Review { Id = 3, Rate = 3, Comment = "Average post", PostId = 3 },
+                new Review { Id = 4, Rate = 2, Comment = "Poor post", PostId = 4 },
+                new Review { Id = 5, Rate = 1, Comment = "Terrible post", PostId = 5 },
+                new Review { Id = 6, Rate = 4, Comment = "Good post", PostId = 6 },
+                new Review { Id = 7, Rate = 5, Comment = "Excellent post", PostId = 7 },
+                new Review { Id = 8, Rate = 3, Comment = "Average post", PostId = 8 },
+                new Review { Id = 9, Rate = 2, Comment = "Poor post", PostId = 9 },
+                new Review { Id = 10, Rate = 1, Comment = "Terrible post", PostId = 10 }
+           
+            );
             // Seed Posts
             modelBuilder.Entity<Post>().HasData(
                 new Post { Id = 1, Name = "post6", UserId = 1 },
@@ -45,20 +59,6 @@ namespace SystemApi.SystemDAL.Context
 
 
 
-            // Seed Reviews
-            modelBuilder.Entity<Review>().HasData(
-                new Review { Id = 1, Rate = 4, Comment = "Good post", PostId = 1 },
-                new Review { Id = 2, Rate = 5, Comment = "Excellent post", PostId = 2 },
-                new Review { Id = 3, Rate = 3, Comment = "Average post", PostId = 3 },
-                new Review { Id = 4, Rate = 2, Comment = "Poor post", PostId = 4 },
-                new Review { Id = 5, Rate = 1, Comment = "Terrible post", PostId = 5 },
-                new Review { Id = 6, Rate = 4, Comment = "Good post", PostId = 6 },
-                new Review { Id = 7, Rate = 5, Comment = "Excellent post", PostId = 7 },
-                new Review { Id = 8, Rate = 3, Comment = "Average post", PostId = 8 },
-                new Review { Id = 9, Rate = 2, Comment = "Poor post", PostId = 9 },
-                new Review { Id = 10, Rate = 1, Comment = "Terrible post", PostId = 10 }
-           
-            );
 
 
             // Seed Stories

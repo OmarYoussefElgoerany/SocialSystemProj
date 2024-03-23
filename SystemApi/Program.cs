@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using SystemApi.SystemDAL.Context;
+using SystemApi.SystemDAL.Repos.PostRepo;
+using SystemApi.SystemDAL.Repos.UserRepo;
 
 namespace SystemApi
 {
@@ -22,7 +24,10 @@ namespace SystemApi
             builder.Services.AddDbContext<SytemDbContext>(options =>
                 options.UseSqlServer(connectionString));
             #endregion
-
+            #region Repos
+            builder.Services.AddScoped<IPostRepo, PostRepo>();
+            builder.Services.AddScoped<IUserRepo, UserRepo>();
+            #endregion
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
